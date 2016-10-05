@@ -7,15 +7,29 @@ var a = prompt("Please enter a number");
 
 console.log(a);
 
-var b = a % 1000;
-var c = a % 100;
-var d = a % 10;
-var e = a % 1;
+var b = a % 1000;//b=631
+var bb = a - b;//bb=9000
+var bbb = bb / 1000;//bbb=9
 
-console.log(b + " thousands");
-console.log(c + " hundreds");
-console.log(d + " tens");
-console.log(e + " ones");
+var c = a % 100;//c=9031
+var cc = a - c;//cc=9600
+var ccc = cc - bb;//600
+var cccc = ccc / 100;//cccc=6
+
+var d = a % 10;//d=9601
+var dd = a - d;//dd=9630
+var ddd = dd - bb - cc;//30
+var dddd = ddd / 10;//3
+
+var e = a % 1;
+var ee = a - e;
+var eee = ee - bb - cc - dd;
+var eeee = eee / 1;
+
+console.log(bbb + " thousands");
+console.log(cccc + " hundreds");
+console.log(dddd + " tens");
+console.log(eeee + " ones");
 
 </script>
 </body>
